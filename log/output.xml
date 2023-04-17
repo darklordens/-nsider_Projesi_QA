@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20230417 18:03:01.256" rpa="false" schemaversion="3">
+<suite id="s1" name="Hepsiburada" source="C:\Users\darklordens\PycharmProjects\python-çalışmaları\Hepsiburada-testleri\hepsiburada.robot">
+<test id="s1-t1" name="İnsider Sayfası Qa İnceleme Ekranları." line="18">
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230417 18:03:01.689" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000027B52DECE80&gt;</msg>
+<status status="PASS" starttime="20230417 18:03:01.688" endtime="20230417 18:03:01.690"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20230417 18:03:01.690" endtime="20230417 18:03:01.690"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${chrome_options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230417 18:03:01.691" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230417 18:03:01.690" endtime="20230417 18:03:03.718"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://useinsider.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230417 18:03:03.719" level="INFO">Opening url 'https://useinsider.com/'</msg>
+<status status="PASS" starttime="20230417 18:03:03.719" endtime="20230417 18:03:08.178"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230417 18:03:08.178" endtime="20230417 18:03:08.651"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${cooke_kapatma}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230417 18:03:08.740" level="INFO">Current page contains element '(//*[@id="wt-cli-accept-all-btn"])'.</msg>
+<status status="PASS" starttime="20230417 18:03:08.652" endtime="20230417 18:03:08.740"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230417 18:03:10.745" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230417 18:03:08.740" endtime="20230417 18:03:10.745"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cooke_kapatma}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230417 18:03:10.746" level="INFO">Clicking element '(//*[@id="wt-cli-accept-all-btn"])'.</msg>
+<status status="PASS" starttime="20230417 18:03:10.746" endtime="20230417 18:03:10.843"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230417 18:03:10.843" endtime="20230417 18:03:10.851"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230417 18:03:12.858" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230417 18:03:10.851" endtime="20230417 18:03:12.858"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${daha_fazla_ekranı}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230417 18:03:12.859" level="INFO">Clicking element '(//*[@id="mega-menu-1"])[6]'.</msg>
+<status status="PASS" starttime="20230417 18:03:12.858" endtime="20230417 18:03:12.943"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230417 18:03:14.944" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230417 18:03:12.943" endtime="20230417 18:03:14.944"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230417 18:03:14.944" endtime="20230417 18:03:14.954"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://useinsider.com/careers/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230417 18:03:14.954" level="INFO">Opening url 'https://useinsider.com/careers/'</msg>
+<status status="PASS" starttime="20230417 18:03:14.954" endtime="20230417 18:03:19.238"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230417 18:03:21.251" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230417 18:03:19.238" endtime="20230417 18:03:21.251"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230417 18:03:21.252" level="INFO">Executing JavaScript:
+window.scrollTo(0,2500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230417 18:03:21.252" endtime="20230417 18:03:21.266"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollBy(0,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230417 18:03:21.267" level="INFO">Executing JavaScript:
+window.scrollBy(0,2500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230417 18:03:21.267" endtime="20230417 18:03:21.281"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230417 18:03:26.295" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230417 18:03:21.282" endtime="20230417 18:03:26.295"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="career-find-our-calling"]/div/div/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230417 18:03:26.296" endtime="20230417 18:03:26.354"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="career-find-our-calling"]/div/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230417 18:03:26.354" level="INFO">Clicking element '//*[@id="career-find-our-calling"]/div/div/a'.</msg>
+<status status="PASS" starttime="20230417 18:03:26.354" endtime="20230417 18:03:26.582"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230417 18:03:30.592" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230417 18:03:26.582" endtime="20230417 18:03:30.592"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(2500,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230417 18:03:30.593" level="INFO">Executing JavaScript:
+window.scrollTo(2500,2500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230417 18:03:30.592" endtime="20230417 18:03:30.604"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollBy(2500,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230417 18:03:30.605" level="INFO">Executing JavaScript:
+window.scrollBy(2500,2500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230417 18:03:30.605" endtime="20230417 18:03:30.617"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230417 18:03:32.633" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230417 18:03:30.618" endtime="20230417 18:03:32.633"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="career-find-our-calling"]/div/div/div[2]/div[12]/div[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230417 18:03:32.637" level="INFO">Clicking element '//*[@id="career-find-our-calling"]/div/div/div[2]/div[12]/div[2]/a'.</msg>
+<status status="PASS" starttime="20230417 18:03:32.637" endtime="20230417 18:03:34.440"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230417 18:03:34.440" endtime="20230417 18:03:34.443"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230417 18:03:36.444" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230417 18:03:34.443" endtime="20230417 18:03:36.444"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="page-head"]/div/div/div[1]/div/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230417 18:03:36.445" level="INFO">Clicking element '//*[@id="page-head"]/div/div/div[1]/div/div/a'.</msg>
+<status status="PASS" starttime="20230417 18:03:36.444" endtime="20230417 18:03:45.679"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230417 18:03:45.679" endtime="20230417 18:03:45.685"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230417 18:03:47.690" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230417 18:03:45.685" endtime="20230417 18:03:47.690"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="top-filter-form"]/div[1]/span/span[1]/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230417 18:03:47.691" level="INFO">Clicking element '//*[@id="top-filter-form"]/div[1]/span/span[1]/span'.</msg>
+<status status="PASS" starttime="20230417 18:03:47.690" endtime="20230417 18:03:47.786"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230417 18:03:49.794" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230417 18:03:47.786" endtime="20230417 18:03:49.794"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//li[text()="Istanbul, Turkey"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230417 18:03:49.795" level="INFO">Clicking element '//li[text()="Istanbul, Turkey"]'.</msg>
+<status status="PASS" starttime="20230417 18:03:49.794" endtime="20230417 18:03:49.890"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,600)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230417 18:03:49.891" level="INFO">Executing JavaScript:
+window.scrollTo(0,600)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230417 18:03:49.890" endtime="20230417 18:03:49.915"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollBy(0,600)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230417 18:03:49.916" level="INFO">Executing JavaScript:
+window.scrollBy(0,600)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230417 18:03:49.915" endtime="20230417 18:03:49.937"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230417 18:03:51.948" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230417 18:03:49.938" endtime="20230417 18:03:51.948"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="jobs-list"]/div[1]/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230417 18:03:51.949" level="INFO">Clicking element '//*[@id="jobs-list"]/div[1]/div/a'.</msg>
+<status status="PASS" starttime="20230417 18:03:51.948" endtime="20230417 18:03:52.153"/>
+</kw>
+<doc>İnsider Sayfasına giriş.</doc>
+<status status="PASS" starttime="20230417 18:03:01.687" endtime="20230417 18:03:52.154"/>
+</test>
+<status status="PASS" starttime="20230417 18:03:01.259" endtime="20230417 18:03:52.155"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Hepsiburada">Hepsiburada</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
